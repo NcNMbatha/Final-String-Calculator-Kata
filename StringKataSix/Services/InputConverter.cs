@@ -1,6 +1,8 @@
-﻿namespace StringKataSix.Services
+﻿using StringKataSix.Interfaces;
+
+namespace StringKataSix.Services
 {
-    public class InputConverter
+    public class InputConverter:IInputConverter
     {
         private ExtractNumbers _extractNumbers;
 

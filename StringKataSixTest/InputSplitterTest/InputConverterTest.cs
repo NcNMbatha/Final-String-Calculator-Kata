@@ -1,10 +1,6 @@
 ﻿using NUnit.Framework;
 using StringKataSix.Services;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StringKataSixTest.InputSplitterTest
 {

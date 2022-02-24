@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringKataSix", "StringKataSix\StringKataSix.csproj", "{19B592FB-43ED-4B26-A3BA-3CEC877CDD4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringKataSix", "StringKataSix\StringKataSix.csproj", "{19B592FB-43ED-4B26-A3BA-3CEC877CDD4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringKataSixTest", "StringKataSixTest\StringKataSixTest.csproj", "{D9EF24A2-0F1F-4382-B05B-76A65BADBDBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringKataSixTest", "StringKataSixTest\StringKataSixTest.csproj", "{D9EF24A2-0F1F-4382-B05B-76A65BADBDBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8589AA15-56D4-45B3-868B-FF5052DACF7F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
