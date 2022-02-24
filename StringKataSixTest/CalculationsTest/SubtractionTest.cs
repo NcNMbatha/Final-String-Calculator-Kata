@@ -8,18 +8,18 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
     public class SubtractionTest
     {
         private Calculator _calculator;
-        private ICalculator _calculateMock;
+        private ICalculator _calculatorMock;
         private IInputConverter _inputConverterMock;
         private IErrorHandler _errorHandlerMock;
 
         [SetUp]
         public void Setup()
         {
-            _calculateMock = Substitute.For<ICalculator>();
+            _calculatorMock = Substitute.For<ICalculator>();
             _errorHandlerMock = Substitute.For<IErrorHandler>();
             _inputConverterMock = Substitute.For<IInputConverter>();
 
-            _calculator = new Calculator(_calculateMock,_errorHandlerMock, _inputConverterMock);
+            _calculator = new Calculator(_calculatorMock, _errorHandlerMock, _inputConverterMock);
         }
 
         [Test]
@@ -28,6 +28,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "";
             var expected = 0;
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -40,7 +41,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "1";
             var expected = -1;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -53,7 +54,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "1,2";
             var expected = -3;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -66,7 +67,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "1,2\n3";
             var expected = -6;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -79,7 +80,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "//;\n1;2";
             var expected = -3;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -92,7 +93,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "1,2\n3,1200";
             var expected = -6;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -104,7 +105,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "//%%%\n1%%%2,3";
             var expected = -6;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -116,7 +117,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "//[*][%]\n1*2%3";
             var expected = -6;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
@@ -128,7 +129,7 @@ namespace StringKataSixTest.InputSplitterTest.CalculationsTest
             //Arrange
             var inputNumbers = "//[***][%%%%]\n1***2%%%%3";
             var expected = -6;
-            _calculator.PerformCalculations(inputNumbers).Returns(expected);
+            _calculatorMock.Calculate(inputNumbers).Returns(expected);
             //Act
             var actual = _calculator.PerformCalculations(inputNumbers);
             //Assert
