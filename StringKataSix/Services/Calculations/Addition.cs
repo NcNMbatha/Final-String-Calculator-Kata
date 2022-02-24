@@ -6,7 +6,7 @@ namespace StringKataSix.Services
     {
         private NumberFilter _filter;
 
-        public Addition()
+        public Addition() 
         {
             _filter = new NumberFilter();
         }
