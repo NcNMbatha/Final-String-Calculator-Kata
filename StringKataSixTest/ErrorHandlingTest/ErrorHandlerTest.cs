@@ -20,8 +20,10 @@ namespace StringKataSixTest.ErrorHandlingTest
         {
             //Arrange
             var inputList = new List<int>() { 1, 2, 3, -3 };
-            //Action and Assert
-            Assert.Throws<Exception>(() => _errorHandler.NegativeNumbersException(inputList));
+            //Action
+            var actual = Assert.Throws<Exception>(() => _errorHandler.NegativeNumbersException(inputList));
+            //Assert
+            Assert.AreEqual("Negative Numbers are not allowed \n -3", actual?.Message);
         }
     }
 }
