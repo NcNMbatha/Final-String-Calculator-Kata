@@ -19,7 +19,7 @@ namespace StringKataSixTest.InputSplitterTest
         {
             //Arrange
             var inputNumbers = "//[***][%%%%]\n1***2%%%%3";
-            var expected = new List<string> { "***", "%%%%" };
+            var expected = new List<string> { ",","\n","***", "%%%%" };
             //Act
             var actual = _delimeter.ExtractDelimetersInBrackets(inputNumbers);
             //Assert
