@@ -1,6 +1,8 @@
-﻿namespace StringKataSix.Services
+﻿using StringKataSix.Interfaces;
+
+namespace StringKataSix.Services
 {
-    public class Delimeter
+    public class Delimeter:IDelimeter
     {
         private InputSplitter _splitter;
         private const string forwardSlashes = "//";
