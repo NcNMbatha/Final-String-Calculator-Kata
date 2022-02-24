@@ -17,6 +17,7 @@ namespace StringKataSix.Services
             {
                 return numbersToSplit.Split(nextLine)[indexOfSplit];
             }
+
             return numbersToSplit;
         }
     }
