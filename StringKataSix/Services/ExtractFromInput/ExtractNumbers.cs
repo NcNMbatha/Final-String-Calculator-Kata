@@ -1,16 +1,14 @@
-﻿using StringKataSix.Interfaces;
-
-namespace StringKataSix.Services
+﻿namespace StringKataSix.Services
 {
     public class ExtractNumbers
     {
-        private IInputSplitter _splitter;
-        private IDelimeter _delimeter;
+        private InputSplitter _splitter;
+        private Delimeter _delimeter;
 
-        public ExtractNumbers(IInputSplitter inputSplitter, IDelimeter delimeter)
+        public ExtractNumbers()
         {
-            _splitter = inputSplitter;
-            _delimeter = delimeter;   
+            _splitter = new InputSplitter();
+            _delimeter = new Delimeter();   
         }
 
         public string[] ExtractNumbersFromTextInput(string numbersToExtract)

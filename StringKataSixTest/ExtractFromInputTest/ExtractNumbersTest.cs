@@ -1,6 +1,4 @@
-﻿using NSubstitute;
-using NUnit.Framework;
-using StringKataSix.Interfaces;
+﻿using NUnit.Framework;
 using StringKataSix.Services;
 using System.Collections.Generic;
 
@@ -9,16 +7,11 @@ namespace StringKataSixTest.InputSplitterTest
     public class ExtractNumbersTest
     {
         private ExtractNumbers _extractNumbers;
-        private IInputSplitter _inputSplitter;
-        private IDelimeter _delimeter;
 
         [SetUp]
         public void Setup()
         {
-            _delimeter = Substitute.For<IDelimeter>();
-            _inputSplitter = Substitute.For<IInputSplitter>();
-
-            _extractNumbers = new ExtractNumbers(_inputSplitter,_delimeter);
+            _extractNumbers = new ExtractNumbers();
         }
 
         [Test]

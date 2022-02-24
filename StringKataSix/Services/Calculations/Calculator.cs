@@ -20,7 +20,9 @@ namespace StringKataSix
             if(string.IsNullOrEmpty(numbersToCalculate))
                 return 0;
 
-            _errorHandler.NegativeNumbersException(_inputConverter.ConvertToNumbers(numbersToCalculate));
+            List<int> convertedNumbersList = _inputConverter.ConvertToNumbers(numbersToCalculate);
+            _errorHandler.NegativeNumbersException(convertedNumbersList);
+
             return _calculator.Calculate(numbersToCalculate);
         }
     }

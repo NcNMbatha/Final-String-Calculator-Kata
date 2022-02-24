@@ -28,7 +28,6 @@ namespace StringKataSix.Services
 
             return sumOfNumbers;
         }
-
         public int Calculate(string numbersToCalculate)
         {
             return DifferenceOfAllNumbers(numbersToCalculate);
