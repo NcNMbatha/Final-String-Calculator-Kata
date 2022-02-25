@@ -6,7 +6,7 @@
 
         public InputConverter()
         {
-            _extractNumbers = new ExtractNumbers(); 
+            _extractNumbers = new ExtractNumbers(new Delimeter(), new InputSplitter()); 
         }
 
         public List<int> ConvertToNumbers(string numbersToConvert)

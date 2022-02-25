@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using StringKataSix.Interfaces;
 using StringKataSix.Services;
 using System.Collections.Generic;
 
@@ -8,7 +7,6 @@ namespace StringKataSixTest.InputSplitterTest
     public class NumberFilterTest
     {
         private NumberFilter _numberFilter;
-        private IInputConverter _converter;
 
         [SetUp]
         public void Setup()

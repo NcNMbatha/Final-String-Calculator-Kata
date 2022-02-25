@@ -1,6 +1,8 @@
-﻿namespace StringKataSix.Services
+﻿using StringKataSix.Interfaces;
+
+namespace StringKataSix.Services
 {
-    public class InputSplitter
+    public class InputSplitter:IInputSplitter
     {
         private const string forwardSlashes = "//";
         private const string nextLine = "\n";
